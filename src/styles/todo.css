@@ -1,0 +1,10 @@
+.todo {
+    border: solid 1px black;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.todo:hover {
+    background-color: rgb(187, 190, 193);
+}
