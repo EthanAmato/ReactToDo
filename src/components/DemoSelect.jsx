@@ -3,6 +3,7 @@ import TodoBoard from "./TodoBoard";
 import DynamicContentDemo from "./DynamicContentDemo";
 import StateDemo from "./StateDemo";
 import ComponentDemoParent from "./ComponentDemoParent"
+import RefDemo from './RefDemo'
 function DemoSelect() {
     const [currentDemo, setCurrentDemo] = useState()
 
@@ -20,7 +21,7 @@ function DemoSelect() {
 
                 break;
             case "ref":
-                newDemo = <RefsDemo />
+                newDemo = <RefDemo />
 
                 break;
             case "todo":
