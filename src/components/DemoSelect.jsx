@@ -45,7 +45,7 @@ function DemoSelect() {
                     <h1>Choose a demo</h1>
                 </div>
                 <div className='row m-auto justify-content-center'>
-                    <div className='col-md-6 text-center'>
+                    <div className='col-md-2'>
                         <div className="form-check">
                             <input className="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" onChange={() => handleChange('dynamic')} />
                             <label className="form-check-label" htmlFor="flexRadioDefault1">

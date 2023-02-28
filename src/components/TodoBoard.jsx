@@ -15,7 +15,12 @@ function TodoBoard() {
     //add todo to list of current todos
     setToDos((current) => {
       let key = (new Date()).getTime()
-      return [...current, <ToDo key={key} text={currentText} />]
+      return [...current, 
+        {
+          key: key,
+          text: currentText
+        } 
+      ]
     })
 
     //clear input
@@ -32,7 +37,7 @@ function TodoBoard() {
 
   return (
     <div className='container board mt-3'>
-      <div className='row'>
+      <div className='row text-center'>
         <h1>To Do List:</h1>
         <p>Click 'Add' to add a new to do and click a todo to cross it off!</p>
       </div>
@@ -41,7 +46,7 @@ function TodoBoard() {
           return (
           <ToDo 
             key={element.key} 
-            text={element.props.text}
+            text={element.text}
             handleDelete ={() => handleDelete(element.key)}
           />
         )

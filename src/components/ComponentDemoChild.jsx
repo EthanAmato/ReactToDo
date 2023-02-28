@@ -6,7 +6,7 @@ function ComponentDemoChild({name, parentName}) {
 
     return (
         <>
-            <h2>Hi my name is {name} and I am the child of {parentName}</h2>
+            <h2 className="text-center">Hi my name is {name} and I am the child of {parentName}</h2>
         </>
     );
 

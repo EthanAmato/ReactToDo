@@ -8,3 +8,17 @@
 .todo:hover {
     background-color: rgb(187, 190, 193);
 }
+
+.text-box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.text {
+    font-size: 1.5em;
+    display: block;
+   
+}

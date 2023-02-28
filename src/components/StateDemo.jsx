@@ -26,10 +26,13 @@ function StateDemo() {
         {/* Notice it is not 'class' when using react, but instead 'className' with camelcase lettering */}
         <div className="container">
             <div className="row">
-                You have clicked the button {numClicks} times
+                <h1 className="text-center">
+                {/* React has a special syntax for inline styling that uses objects and camelcased css properties: */}
+                You have clicked the button <span style={{color:"red", fontWeight:"800"}}>{numClicks}</span> times
+                </h1>
             </div>
-            <div className="row">
-                <div className="col-md-3">
+            <div className="row d-flex justify-content-center">
+                <div className="col-md-3 d-flex justify-content-around">
                 {/* when clicked, call the handleClick function
                 it should be noted there is a whole suite of similar event handlers that correspond to different
                 html elements: e.g. onChange, onSubmit, onInput, etc.
