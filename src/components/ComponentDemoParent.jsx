@@ -37,7 +37,11 @@ function ComponentDemoParent() {
                         // 'name' and 'parentName' are COMPLETELY MADE UP NAMES. They are called props and they are used for
                         //transmitting information to and from child/parent components (you can even pass setState functions 
                         //which also lets a child element influence what goes on in parent element but thats too advanced rn)
-                        <ComponentDemoChild key={index} name={childName} parentName={parent} />
+                        <ComponentDemoChild 
+                                key={index} 
+                                name={childName} 
+                                parentName={parent} 
+                        />
                     );
                 })}
             </div>

@@ -5,7 +5,6 @@ function TodoBoard() {
   //List of 'ToDo' components - starting value is empty array since user hasn't put anything in it yet!
   const [toDos, setToDos] = useState([]);
 
-  const [newSavedValue, setNewSavedValue] = useState()
   //Placeholder 'ref' which allows us to readily access an html element and its associated values on demand!
   const inputRef = useRef();
 
@@ -15,12 +14,8 @@ function TodoBoard() {
 
     //add todo to list of current todos
     setToDos((current) => {
-      let key = (new Date()).getTime()
       return [...current, 
-        {
-          id: key,
-          text: currentText
-        } 
+        currentText
       ]
     })
 
@@ -29,17 +24,13 @@ function TodoBoard() {
   }
 
   //given a unique key value (which we set when adding), delete/filter out a SPECIFIC todo
-  function handleDelete(id) {    
+  function handleDelete(key) {    
     setToDos(() => {
-      return toDos.filter((todo) => todo.id !== id)
+      return toDos.filter((todo) => todo.key !== key)
     })
   }
-
-  function handleSave(id, newText) {
-    let updatedItemIndex = toDos.findIndex((toDoItem) => toDoItem.id === id)
-    let updatedList = [...toDos]
-    updatedList[updatedItemIndex].text = newText;
-    setToDos(updatedList)
+  function handleSave(key, text) {
+    
   }
 
   return (
@@ -52,11 +43,9 @@ function TodoBoard() {
         {toDos.map((element, i) => {
           return (
           <ToDo 
-            key={element.id} 
-            id={element.id}
+            key={element.key} 
             text={element.text}
-            handleDelete ={() => handleDelete(element.id)}
-            handleSave = {handleSave}
+            handleDelete ={() => handleDelete(element.key)}
           />
         )
         })}
